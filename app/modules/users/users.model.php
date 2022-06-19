@@ -15,69 +15,22 @@ require_once DOCUMENT_ROOT . "app/modules/appframework/conexion.softmor.php";
 
 class UsersModel
 {
-    public static function mdlAgregarUsers()
+    public static function mdlLoginUsers($user)
     {
+
         try {
             //code...
-            $sql = "";
+            $sql = "SELECT * FROM tbl_users_usr WHERE usr_id = ? OR usr_email = ? OR usr_phone = ? ";
             $con = ConexionSoftmor::conectar();
             $pps = $con->prepare($sql);
-
-            $pps -> execute();
-            return $pps -> rowCount()>0;
+            $pps->bindValue(1, $user);
+            $pps->bindValue(2, $user);
+            $pps->bindValue(3, $user);
+            $pps->execute();
+            return $pps->fetch();
         } catch (PDOException $th) {
             //throw $th;
-        } finally {
-            $pps = null;
-            $con = null;
-        }
-    }
-    public static function mdlActualizarUsers()
-    {
-        try {
-            //code...
-            $sql = "";
-            $con = ConexionSoftmor::conectar();
-            $pps = $con->prepare($sql);
-
-            $pps -> execute();
-            return $pps -> rowCount()>0;
-        } catch (PDOException $th) {
-            //throw $th;
-        } finally {
-            $pps = null;
-            $con = null;
-        }
-    }
-    public static function mdlMostrarUsers()
-    {
-        try {
-            //code...
-            $sql = "";
-            $con = ConexionSoftmor::conectar();
-            $pps = $con->prepare($sql);
-
-            $pps -> execute();
-            return $pps ->fetchAll();
-        } catch (PDOException $th) {
-            //throw $th;
-        } finally {
-            $pps = null;
-            $con = null;
-        }
-    }
-    public static function mdlEliminarUsers()
-    {
-        try {
-            //code...
-            $sql = "";
-            $con = ConexionSoftmor::conectar();
-            $pps = $con->prepare($sql);
-
-            $pps -> execute();
-            return $pps -> rowCount()>0;
-        } catch (PDOException $th) {
-            //throw $th;
+            return false;
         } finally {
             $pps = null;
             $con = null;

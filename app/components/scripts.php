@@ -40,5 +40,7 @@
  <!-- Theme js-->
  <script src="<?= HTTP_HOST . 'app/assets/' ?>js/script.js"></script>
  <script src="<?= HTTP_HOST . 'app/assets/' ?>js/theme-customizer/customizer.js"></script>
+ <script src="<?= HTTP_HOST . 'app/' ?>modules/appframework/appframework.js"></script>
  <!-- login js-->
  <!-- Plugin used-->
+ <script src="<?= HTTP_HOST . 'app/' ?>assets/js/toastr.min.js"></script>

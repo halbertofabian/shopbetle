@@ -268,18 +268,18 @@ $('.show-hide span').addClass('show');
 
 $('.show-hide span').click(function () {
     if ($(this).hasClass('show')) {
-        $('input[name="password"]').attr('type', 'text');
+        $('input[name="usr_password"]').attr('type', 'text');
         $(this).removeClass('show');
         $(this).addClass('show-hide');
     } else {
-        $('input[name="password"]').attr('type', 'password');
+        $('input[name="usr_password"]').attr('type', 'password');
         $(this).addClass('show');
         $(this).removeClass('show-hide');
     }
 });
 $('form button[type="submit"]').on('click', function () {
     $('.show-hide span').addClass('show');
-    $('.show-hide').parent().find('input[name="password"]').attr('type', 'password');
+    $('.show-hide').parent().find('input[name="usr_password"]').attr('type', 'password');
 });
 
 

@@ -20,5 +20,14 @@ require_once DOCUMENT_ROOT . 'app/modules/users/users.controller.php';
 require_once DOCUMENT_ROOT . 'app/modules/appframework/appframework.controller.php';
 class UsersAjax
 {
+    public function ajaxLoginUser()
+    {
+        $res = UsersController::ctrLoginUser($_POST);
+        echo json_encode($res, true);
+    }
+}
+if (isset($_POST['btnLoginUser'])) {
+    $loginUser = new UsersAjax();
+    $loginUser->ajaxLoginUser();
 }
 
