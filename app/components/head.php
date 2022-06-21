@@ -21,6 +21,9 @@
     <link rel="stylesheet" type="text/css" href="<?= HTTP_HOST . 'app/assets/' ?>css/themify.css">
     <!-- Flag icon-->
     <link rel="stylesheet" type="text/css" href="<?= HTTP_HOST . 'app/assets/' ?>css/flag-icon.css">
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="<?= HTTP_HOST . 'app/assets/' ?>css/sweetalert2.css">
+    <link rel="stylesheet" type="text/css" href="<?= HTTP_HOST . 'app/assets/' ?>css/datatables.css">
     <!-- Feather icon-->
     <link rel="stylesheet" type="text/css" href="<?= HTTP_HOST . 'app/assets/' ?>css/feather-icon.css">
     <!-- Plugins css start-->

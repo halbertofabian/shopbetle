@@ -37,6 +37,13 @@
  <script src="<?= HTTP_HOST . 'app/assets/' ?>js/datepicker/date-picker/datepicker.en.js"></script>
  <script src="<?= HTTP_HOST . 'app/assets/' ?>js/datepicker/date-picker/datepicker.custom.js"></script>
  <!-- Plugins JS Ends-->
+ <!-- Plugins JS start-->
+ <script src="<?= HTTP_HOST . 'app/assets/' ?>js/datatable/datatables/jquery.dataTables.min.js"></script>
+ <script src="<?= HTTP_HOST . 'app/assets/' ?>js/datatable/datatables/datatable.custom.js"></script>
+ <script src="<?= HTTP_HOST . 'app/assets/' ?>js/sweet-alert/sweetalert.min.js"></script>
+ <script src="<?= HTTP_HOST . 'app/assets/' ?>js/sweet-alert/app.js"></script>
+ <script src="<?= HTTP_HOST . 'app/assets/' ?>js/tooltip-init.js"></script>
+ <!-- Plugins JS Ends-->
  <!-- Theme js-->
  <script src="<?= HTTP_HOST . 'app/assets/' ?>js/script.js"></script>
  <script src="<?= HTTP_HOST . 'app/assets/' ?>js/theme-customizer/customizer.js"></script>

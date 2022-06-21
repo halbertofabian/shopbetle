@@ -74,29 +74,17 @@ class AppFrameWorkController
         $_404 = true;
 
         if (!isset($rute[1])) {
-            echo '<div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">';
+            echo '<div class="container-fluid">';
             $app->loadView2($module . '/views/' . $default_page . '/' . $default_page);
-            echo ' </div>
-            </div>
-        </div>
-    </div>';
+            echo ' </div>';
             $app->loadView2($module . '/views/' . $default_page . '/' . $default_page);
         } else {
             foreach ($array_view as $view) {
                 if ($rute[1] == $view['page']) {
                     $app->loadHeaderPage($view['header_page']);
-                    echo '<div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">';
+                    echo '<div class="container-fluid">';
                     $app->loadView2($module . '/views/' . $view['page'] . '/' . $view['page']);
-                    echo ' </div>
-                    </div>
-                </div>
-            </div>';
+                    echo ' </div>';
 
                     $_404 = false;
                 }
